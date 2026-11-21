@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Barra superior */
+.navbar {
+    background: linear-gradient(90deg, #1b4f72, #2874a6);
+    color: white;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #1b4f72;
+    padding: 5px 14px;
+    border-radius: 25px;
+}
+
+.escudo-placeholder {
+    background-color: #1b4f72;
+    color: white;
+    font-weight: bold;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.82rem;
+    line-height: 1.2;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-nav-verde {
+    background-color: #52be80;
+    color: #145a32;
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border: 1px solid #1e8449;
+    transition: background 0.25s, color 0.25s;
+}
+
+.btn-nav-verde:hover {
+    background-color: #1e8449;
+    color: white;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 860px;
+    width: 92%;
+    margin: 25px auto;
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    flex: 1;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 22px;
+    border-bottom: 2px solid #e5e8e8;
+    padding-bottom: 14px;
+}
+
+.hero h1 {
+    color: #1b4f72;
+    font-size: 1.75rem;
+    margin-bottom: 6px;
+}
+
+.hero p {
+    color: #566573;
+    font-size: 1.05rem;
+}
+
+/* Caja de reportes */
+.panel-box {
+    border: 1.5px solid #95a5a6;
+    border-radius: 8px;
+    padding: 18px;
+    background-color: #fafcfc;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.panel-header h2 {
+    font-size: 1.25rem;
+    color: #1b4f72;
+}
+
+.filtros {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    background-color: #eef2f3;
+    color: #2c3e50;
+    border: 1.5px solid #7f8c8d;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-filtro:hover, .btn-filtro.activo {
+    background-color: #d4efdf;
+    border-color: #1e8449;
+    color: #145a32;
+}
+
+/* Tabla */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.tabla-reportes {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.tabla-reportes th,
+.tabla-reportes td {
+    border: 1.5px solid #7f8c8d;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tabla-reportes th {
+    background-color: #eaf2f8;
+    color: #1b4f72;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.tabla-reportes td:nth-child(3),
+.tabla-reportes td:nth-child(4) {
+    text-align: center;
+}
+
+/* Estatus */
+.badge-estatus {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.92rem;
+    border: 1px solid #7f8c8d;
+}
+
+.estatus-pendiente {
+    background-color: #f9e79f;
+    color: #7d6608;
+}
+
+.estatus-proceso {
+    background-color: #85c1e9;
+    color: #1b4f72;
+}
+
+.estatus-reparado {
+    background-color: #a9dfbf;
+    color: #145a32;
+}
+
+/* Botones de acción */
+.btn-accion {
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.88rem;
+    cursor: pointer;
+    border: 1.5px solid #2c3e50;
+    line-height: 1.25;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-accion:hover {
+    opacity: 0.9;
+}
+
+.btn-accion:active {
+    transform: scale(0.98);
+}
+
+.btn-marcar-proceso {
+    background-color: #a9dfbf;
+    color: #145a32;
+    border-color: #1e8449;
+}
+
+.btn-marcar-reparado {
+    background-color: #aed6f1;
+    color: #1b4f72;
+    border-color: #2874a6;
+}
+
+.btn-completado {
+    background-color: #eaeded;
+    color: #566573;
+    border-color: #95a5a6;
+    cursor: default;
+}
+
+/* Paginación */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.btn-pag {
+    background: transparent;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.btn-pag.activo, .btn-pag:hover {
+    background-color: #d6eaf8;
+    color: #1b4f72;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 16px;
+    background-color: #eaeded;
+    color: #2c3e50;
+    font-weight: 500;
+    border-top: 1px solid #d5dbdb;
+    line-height: 1.6;
+}
+
+.footer a {
+    color: #2874a6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

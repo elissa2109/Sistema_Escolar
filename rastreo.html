@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Seguimiento - CBTis 166</title>
+    <link rel="stylesheet" href="rastreo.css">
+</head>
+<body>
+
+    <!-- Barra de navegación superior -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="escudo-placeholder">166</div>
+            <div class="logo-text">
+                <strong>CBTis 166</strong>
+                <span>Agua para el futuro</span>
+            </div>
+        </div>
+
+        <nav class="nav-actions">
+            <a href="index.html" class="btn-nav-verde">NUEVO REPORTE</a>
+            <a href="login.html" class="btn-nav-verde">INICIAR SESIÓN (Personal)</a>
+        </nav>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="container">
+        <section class="hero">
+            <h1>Sistema Escolar de Reporte de Fugas</h1>
+            <p>Ingrese su folio para conocer el estado de su atención</p>
+        </section>
+
+        <!-- Buscador por folio -->
+        <form id="formRastreo" class="search-box">
+            <label for="folioInput">Buscar por Folio:</label>
+            <div class="input-group">
+                <input type="text" id="folioInput" placeholder="Ej. #0045" value="#0045" required>
+                <span class="search-icon" aria-hidden="true">&#128269;</span>
+            </div>
+            <button type="submit" class="btn-rastrear">RASTREAR REPORTE</button>
+        </form>
+
+        <!-- Tarjeta de estado actual -->
+        <section id="resultadoRastreo" class="status-card">
+            <h2 id="tituloFolio">Estado Actual del Folio #0045</h2>
+
+            <!-- Línea de tiempo de 3 pasos -->
+            <div class="timeline">
+                <div class="step completado" id="pasoRecibido">
+                    <div class="circle">&#10003;</div>
+                    <div class="step-label"><strong>[&#10003;] Recibido</strong></div>
+                    <div class="step-date" id="fechaRecibido">con fecha: 18/11/2026</div>
+                </div>
+
+                <div class="line activa" id="linea1"></div>
+
+                <div class="step en-proceso" id="pasoReparacion">
+                    <div class="circle">&#9881;</div>
+                    <div class="step-label"><strong>[&#9881;] En reparación</strong></div>
+                    <div class="step-date" id="fechaReparacion">con fecha: 19/11/2026</div>
+                </div>
+
+                <div class="line" id="linea2"></div>
+
+                <div class="step pendiente" id="pasoReparado">
+                    <div class="circle">O</div>
+                    <div class="step-label"><strong>[O] Reparado</strong></div>
+                    <div class="step-date" id="fechaReparado">con fecha: Pendiente</div>
+                </div>
+            </div>
+
+            <!-- Detalles del reporte -->
+            <div class="detalles-reporte">
+                <p><strong>Ubicación:</strong> <span id="detalleUbicacion">Bebederos patio central.</span></p>
+                <p><strong>Descripción:</strong> <span id="detalleDescripcion">Llave rota tirando mucha agua.</span></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>#CBTis166aguaparaelfuturo | <a href="index.html">Volver a la página principal</a></p>
+    </footer>
+
+    <script src="rastreo.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Barra superior */
+.navbar {
+    background: linear-gradient(90deg, #1b4f72, #2874a6);
+    color: white;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #1b4f72;
+    padding: 5px 14px;
+    border-radius: 25px;
+}
+
+.escudo-placeholder {
+    background-color: #1b4f72;
+    color: white;
+    font-weight: bold;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.82rem;
+    line-height: 1.2;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-nav-azul {
+    background-color: #5dade2;
+    color: #0e2f44;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.82rem;
+    border: 1px solid #1b4f72;
+    transition: background 0.25s, color 0.25s;
+}
+
+.btn-nav-azul:hover {
+    background-color: #2874a6;
+    color: white;
+}
+
+.btn-nav-verde {
+    background-color: #52be80;
+    color: #145a32;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.82rem;
+    border: 1px solid #1e8449;
+    transition: background 0.25s, color 0.25s;
+}
+
+.btn-nav-verde:hover {
+    background-color: #1e8449;
+    color: white;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 880px;
+    width: 92%;
+    margin: 22px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    flex: 1;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    color: #1b4f72;
+    font-size: 1.75rem;
+    margin-bottom: 4px;
+}
+
+.hero p {
+    color: #34495e;
+    font-size: 1.1rem;
+}
+
+/* Tarjetas de métricas */
+.metricas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.metrica-card {
+    border: 1.5px solid #2c3e50;
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.card-reportadas {
+    background-color: #a9dfbf;
+    color: #145a32;
+}
+
+.card-proceso {
+    background-color: #f9e79f;
+    color: #7d6608;
+}
+
+.card-atendidas {
+    background-color: #f1948a;
+    color: #641e16;
+}
+
+.metrica-valor {
+    font-size: 1.25rem;
+}
+
+/* Gráficas */
+.graficas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.grafica-box {
+    border: 1.5px solid #7f8c8d;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: #fafcfc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grafica-box h2 {
+    font-size: 1.1rem;
+    color: #1b4f72;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.leyenda-pastel {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.pastel-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+}
+
+.etiqueta-pastel-mayor {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+/* Tabla Últimas 3 Fugas Atendidas */
+.ultimas-section h2 {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #1b4f72;
+    margin-bottom: 10px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.tabla-atendidas {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.tabla-atendidas th,
+.tabla-atendidas td {
+    border: 1.5px solid #7f8c8d;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.tabla-atendidas th {
+    background-color: #eaf2f8;
+    color: #1b4f72;
+    font-weight: bold;
+}
+
+.estatus-cell {
+    font-weight: 600;
+    color: #145a32;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 16px;
+    background-color: #eaeded;
+    color: #2c3e50;
+    font-weight: 500;
+    border-top: 1px solid #d5dbdb;
+}
+
+@media (max-width: 720px) {
+    .metricas-grid,
+    .graficas-grid {
+        grid-template-columns: 1fr;
+    }
+}

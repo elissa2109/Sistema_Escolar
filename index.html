@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar de Reporte de Fugas - CBTis 166</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra de navegación superior -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="escudo-placeholder">166</div>
+            <div class="logo-text">
+                <strong>CBTis 166</strong>
+                <span>Agua para el futuro</span>
+            </div>
+        </div>
+        <a href="login.html" class="btn-login">INICIAR SESIÓN (Personal)</a>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="container">
+        <section class="hero">
+            <h1>Sistema Escolar de Reporte de Fugas</h1>
+            <p>Plataforma para el cuidado y mantenimiento del agua en el CBTis 166. Reporte anónimo y rastreable.</p>
+        </section>
+
+        <!-- Formulario de reporte -->
+        <form id="formReporte" class="report-form" action="guardar_reporte.php" method="POST" enctype="multipart/form-data">
+            
+            <div class="form-group">
+                <label for="ubicacion">Ubicación de la fuga:</label>
+                <select id="ubicacion" name="ubicacion" required>
+                    <option value="Baños Edificio A">Baños Edificio A</option>
+                    <option value="Bebederos Centrales">Bebederos Centrales</option>
+                    <option value="Jardines (Pozo)">Jardines (Pozo)</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción del problema:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Ej. Llave goteando mucho en bebederos del patio A." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="foto">Adjuntar foto (opcional):</label>
+                <input type="file" id="foto" name="foto" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label>Nivel de urgencia:</label>
+                <div class="urgencia-opciones">
+                    <label class="radio-label">
+                        <input type="radio" name="urgencia" value="Low" checked> Low
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="urgencia" value="Medium"> Medium
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="urgencia" value="High"> High
+                    </label>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button type="submit" class="btn-enviar">ENVIAR REPORTE ANÓNIMO</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>#CBTis166aguaparaelfuturo | <a href="rastreo.html">Consultar estado del folio</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

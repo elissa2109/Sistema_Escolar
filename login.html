@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - CBTis 166</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <!-- Barra de navegación superior -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="escudo-placeholder">166</div>
+            <div class="logo-text">
+                <strong>CBTis 166</strong>
+                <span>Agua para el futuro</span>
+            </div>
+        </div>
+
+        <nav class="nav-actions">
+            <a href="index.html" class="btn-nav-verde">NUEVO REPORTE</a>
+            <a href="login.html" class="btn-nav-verde activo">INICIAR SESIÓN (Personal)</a>
+        </nav>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="main-wrapper">
+        <!-- Tarjeta de Login -->
+        <section class="login-card">
+            <div class="card-header">
+                <span class="lock-icon" aria-hidden="true">&#128274;</span>
+                <h1>Acceso Administrativo y Mantenimiento</h1>
+            </div>
+
+            <form id="formLogin" action="validar_login.php" method="POST">
+                <div class="input-group">
+                    <label for="usuario">&#128100; Usuario / Correo Institucional:</label>
+                    <div class="input-with-icon">
+                        <span class="field-icon">&#128100;</span>
+                        <input type="email" id="usuario" name="usuario" placeholder="Ej. director@cbtis166.edu.mx" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">&#128273; Contraseña:</label>
+                    <div class="input-with-icon">
+                        <span class="field-icon">&#128273;</span>
+                        <input type="password" id="password" name="password" placeholder="••••••••••" required>
+                    </div>
+                </div>
+
+                <div class="remember-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="recordar" name="recordar">
+                        Recordar sesión
+                    </label>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn-entrar">ENTRAR AL SISTEMA</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Enlaces debajo de la tarjeta -->
+        <div class="extra-links">
+            <a href="#" id="linkOlvide">Olvidé mi contraseña</a>
+            <a href="index.html" class="back-link">&larr; Volver a Reporte Ciudadano Anónimo</a>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>#CBTis166aguaparaelfuturo | Portal Institucional CBTis 166</p>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html>
